@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body styling */
+
 body {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     display: flex;
@@ -15,7 +15,6 @@ body {
     height: 100vh;
 }
 
-/* Container styling */
 .container {
     text-align: center;
     padding: 30px;
@@ -26,14 +25,13 @@ body {
     max-width: 600px;
 }
 
-/* Header styling */
 .container h1 {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Form styling */
+
 .task-form {
     display: flex;
     gap: 10px;
