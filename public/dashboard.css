@@ -1,4 +1,4 @@
-/* Base Styles */
+
 body {
     background: linear-gradient(135deg, #e0f7fa, #ffe0f7);
     display: flex;
@@ -10,14 +10,14 @@ body {
 
 .dashboard-container {
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.8); 
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 800px;
 }
 
-/* Header Styles */
+
 .dashboard-container h1 {
     font-size: 2.5em;
     color: #333;
@@ -25,7 +25,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Task Form Styles */
 .task-form {
     display: flex;
     gap: 10px;
@@ -61,7 +60,6 @@ body {
     background-color: #357ABD;
 }
 
-/* Transparent Table for Task List */
 .task-list {
     margin-top: 20px;
     font-size: 1.1em;
@@ -91,7 +89,7 @@ body {
     background-color: rgba(255, 255, 255, 0.4); /* Slightly different shade for rows */
 }
 
-/* Task Item Action Buttons */
+
 .task-item-actions {
     display: flex;
     gap: 10px;
