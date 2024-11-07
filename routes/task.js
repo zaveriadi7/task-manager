@@ -10,13 +10,13 @@ function isAuthenticated(req, res, next) {
     res.redirect('/auth/login');
 }
 
-// List all tasks
+
 router.get('/', isAuthenticated, async (req, res) => {
     const result = await pool.query('SELECT * FROM tasks WHERE user_id = $1', [req.session.userId]);
     res.render('dashboard', { tasks: result.rows });
 });
 
-// Create a new task
+
 router.post('/add-task', isAuthenticated, async (req, res) => {
     const { title, description, dueDate } = req.body;
     try {
@@ -30,7 +30,7 @@ router.post('/add-task', isAuthenticated, async (req, res) => {
         res.status(500).send("Error adding task.");
     }
 });
-// Delete a task
+
 router.post('/delete-task/:id', isAuthenticated, async (req, res) => {
     const taskId = req.params.id;
     try {
@@ -41,7 +41,7 @@ router.post('/delete-task/:id', isAuthenticated, async (req, res) => {
         res.status(500).send("Error deleting task.");
     }
 });
-// Update a task
+
 router.post('/update-task/:id', isAuthenticated, async (req, res) => {
     const taskId = req.params.id;
     const { status } = req.body; // Assuming you're only updating the status here
