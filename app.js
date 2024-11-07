@@ -6,7 +6,7 @@ const pool = require('./config/db'); // PostgreSQL configuration
 
 const app = express();
 
-// Middleware setup
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     secret: 'your_secret_key',
@@ -16,19 +16,19 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-// Routes
+
 const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/task');
 
 app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
 
-// Render home page
+
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-// Start server
+
 app.listen(3000, () => {
     console.log('Server running on http://localhost:3000');
 });
